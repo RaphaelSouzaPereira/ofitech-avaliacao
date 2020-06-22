@@ -33,7 +33,7 @@ module.exports = {
         mecanicaId,
       });
     }
-    const apiResponse = await axios.put("http://localhost:3031/api/mecanica", {
+    const apiResponse = await axios.put("https://ofitech-mecanica.herokuapp.com/api/mecanica", {
       mecanicaId: mecanicaId,
     });
 
