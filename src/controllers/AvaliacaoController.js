@@ -33,10 +33,11 @@ module.exports = {
         mecanicaId,
       });
     }
-    const apiResponse = await axios.put("https://ofitech-mecanica.herokuapp.com/api/mecanica", {
+    console.log('Cheguei no atualiza mecanica');
+    await axios.put("https://ofitech-mecanica.herokuapp.com/api/mecanica", {
       mecanicaId: mecanicaId,
     });
-
+    console.log('Passei no atualiza mecanica');
     return response.status(204).json(avaliacao);
   },
 
