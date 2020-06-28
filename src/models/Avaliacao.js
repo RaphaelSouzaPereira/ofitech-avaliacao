@@ -8,6 +8,7 @@ const AvaliacaoSchema = new mongoose.Schema(
     userId: String,
     genero: String,
     mecanicaId: String,
+    nome: String
   },
   {
     timestamps: true,

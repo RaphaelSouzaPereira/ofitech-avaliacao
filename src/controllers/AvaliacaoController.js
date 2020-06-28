@@ -10,7 +10,7 @@ module.exports = {
   },
 
   async store(request, response) {
-    const { descricao, nota, valor, userId, genero, mecanicaId } = request.body;
+    const { descricao, nota, valor, userId, genero, mecanicaId, nome } = request.body;
 
     let avaliacao = await Avaliacao.findOne({ userId, mecanicaId });
 
@@ -22,6 +22,7 @@ module.exports = {
         userId,
         genero,
         mecanicaId,
+        nome
       });
     } else {
       avaliacao = await Avaliacao.update({
@@ -31,6 +32,7 @@ module.exports = {
         userId,
         genero,
         mecanicaId,
+        nome
       });
     }
     console.log('Cheguei no atualiza mecanica');
